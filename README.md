@@ -1,4 +1,4 @@
-ocal Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/WetCheezit/Bracket-V2/main/src.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/WetCheezit/Bracket-V2/main/src.lua"))()
 
 -- Window local Window, MainGUI = Library:CreateWindow("KAWASAKI HUB")
 
