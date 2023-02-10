@@ -11,9 +11,7 @@ local MainTab = Window:NewTab("Weapon Spams")
 
 local Main = Window:NewTab("Haki")
 local MainSection = Tab:NewSection("Select a method")
------------------------------------ Haki Scripts
 MainSection:NewButton("Haki levels", "Grinds ur haki level", function(state)
-
 local pl = tostring(game:GetService("Players").LocalPlayer.UserId)
 local lv = game:GetService("Workspace").UserData["User_"..pl].Data.HakiLevel.Value
 for i = 1,25 do
