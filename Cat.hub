@@ -5,37 +5,73 @@ end
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("One Piece Legendary | Made by Cat#2728", "BloodTheme", colors)
 
-local Tab = Window:NewTab("Haki")
-local Tab2 = Window:NewTab("Islands/Players")
-local Tab3 = Window:NewTab("Sam")
-local Tab4 = Window:NewTab("Drinks")
-local Tab5 = Window:NewTab("Farming")
-local Tab6 = Window:NewTab("FruitFarming")
-local Tab7 = Window:NewTab("Kill Players")
-local Tab8 = Window:NewTab("Misc")
-local Tab9 = Window:NewTab("Weapon Spams")
 
 
-local HakiSection = Tab:NewSection("Select a method")
-local TPSection = Tab2:NewSection("Teleports")
-local SamSection = Tab3:NewSection("Sam Quests")
-local DrinkingSection = Tab4:NewSection("Drinks")
-local FarmingSection = Tab5:NewSection("Spawn")
-local FarmingSection3 = Tab5:NewSection("Extra")
-local FFarmingSection = Tab6:NewSection("Light Fruit")
-local FFarmingSection2 = Tab6:NewSection("Quake Fruit")
-local FFarmingSection3 = Tab6:NewSection("Rumble Fruit")
-local KPSection = Tab7:NewSection("Players")
-local KPSection2 = Tab7:NewSection("Quake Fruit")
-local KPSection3 = Tab7:NewSection("Light Fruit")
-local MiscSection = Tab8:NewSection("Random Shit")
-local WeaponSection1 = Tab9:NewSection("Yoru")
-local WeaponSection2 = Tab9:NewSection("Seastone Cestus")
+local MainTab = Window:NewTab("Sam")
+local MainTab = Window:NewTab("Drinks")
+local MainTab = Window:NewTab("Farming")
+local MainTab = Window:NewTab("FruitFarming")
+local MainTab = Window:NewTab("Kill Players")
+local MainTab = Window:NewTab("Misc")
+local MainTab = Window:NewTab("Weapon Spams")
+
+local Main = Window:NewTab("Haki")
+local MainSection = Tab:NewSection("Select a method")
+----------------------------------- Haki Scripts
+HakiSection:NewButton("Haki levels", "Grinds ur haki level", function(state)
+
+local pl = tostring(game:GetService("Players").LocalPlayer.UserId)
+local lv = game:GetService("Workspace").UserData["User_"..pl].Data.HakiLevel.Value
+for i = 1,25 do
+while wait() do
+workspace.UserData["User_"..pl].III:FireServer("On", lv)
+wait()
+workspace.UserData["User_"..pl].III:FireServer("On", lv)
+wait()
+workspace.UserData["User_"..pl].III:FireServer("Off", lv)
+wait()
+workspace.UserData["User_"..pl].III:FireServer("Off", lv)   
+end
+end
+end)
+
+local MainTab = Window:NewTab("Islands/Players")
+local MainSection = Tab:NewSection("Teleports")
+
+local SamSection = Tab:NewSection("Sam Quests")
+
+local DrinkingSection = Tab:NewSection("Drinks")
+
+local FarmingSection = Tab:NewSection("Spawn")
+
+local FarmingSection3 = Tab:NewSection("Extra")
+
+local FFarmingSection = Tab:NewSection("Light Fruit")
+
+local FFarmingSection2 = Tab:NewSection("Quake Fruit")
+
+local FFarmingSection3 = Tab:NewSection("Rumble Fruit")
+
+local KPSection = Tab:NewSection("Players")
+
+local KPSection2 = Tab:NewSection("Quake Fruit")
+
+local KPSection3 = Tab:NewSection("Light Fruit")
+
+local MiscSection = Tab:NewSection("Random Shit")
+
+local WeaponSection1 = Tab:NewSection("Yoru")
+
+local WeaponSection2 = Tab:NewSection("Seastone Cestus")
 
 local Settings = Window:NewTab("Settings")
+
 local SettingsSection = Settings:NewSection("Settings")
+
 local ColorSection = Settings:NewSection("Ui Color")
+
 local PLRS = {}
+
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(PLRS,v.Name)
 end
@@ -118,28 +154,6 @@ else
         _G.NoStun = false
     end
 end)
-
-MiscSection:NewButton("Anti-mod", "Kicks if a mod is in server or joins server", function()
-    local Pedo = {
-        1135910299,520944,43247021
-    }
-    
-    for _, v in pairs(game:GetService("Players"):GetPlayers()) do
-        for _, v1 in pairs(Pedo) do
-            if v.UserId == v1 then
-                game:GetService("Players").LocalPlayer:Kick("Admin is in the server")
-            end
-        end
-    end
-    
-    game:GetService("Players").PlayerAdded:Connect(function(r)
-        for _, v in pairs(Pedo) do
-            if r.UserId == v then
-                game:GetService("Players").LocalPlayer:Kick("Admin has joined the server")
-            end
-        end
-    end)
-    end)
 
 MiscSection:NewButton("Expertise GUI", "Shows the Expertise GUI", function()
     for i,v in pairs(game:GetService("Workspace").Merchants.ExpertiseMerchant:GetDescendants()) do
@@ -705,24 +719,6 @@ end
         _G.Tpfruit = false
     end
 end) 
-
------------------------------------ Haki Scripts
-HakiSection:NewButton("Haki levels", "Grinds ur haki level", function(state)
-
-local pl = tostring(game:GetService("Players").LocalPlayer.UserId)
-local lv = game:GetService("Workspace").UserData["User_"..pl].Data.HakiLevel.Value
-for i = 1,25 do
-while wait() do
-workspace.UserData["User_"..pl].III:FireServer("On", lv)
-wait()
-workspace.UserData["User_"..pl].III:FireServer("On", lv)
-wait()
-workspace.UserData["User_"..pl].III:FireServer("Off", lv)
-wait()
-workspace.UserData["User_"..pl].III:FireServer("Off", lv)   
-end
-end
-end)
 
 ----------------------------------- Teleports
 TPSection:NewDropdown("Island Teleports", "Teleports you to chosen island", {"Sand", "RaceTrack" , "Disco" ,"Cave", "MarineFort" ,"Sam", "Krizma", "Moss" , "Expertise", "Mansion" , "Tall Trees" , "Dead Trees", "Pyramid", "BigSnow", "Little Snow", "Vokkun", "Kaizu", "Purple", "Pursuer", "Safe Place"}, function(currentOption)
