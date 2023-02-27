@@ -9,9 +9,12 @@ end)
 MainSection:NewToggle("Spam Time Stop", "Spams Time Stop", function(state)
     if state then SpamTs = state
         while SpamTs == do
-game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
 wait()
-    else
+game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
+end
+end
+end
+else
 SpamTs = state
 while SpamTs == true do
 end
