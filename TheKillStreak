@@ -13,7 +13,11 @@ While _G.Sts do
 wait()
 game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
 end
+end
+end
 else
 _G.Sts = false
+end
+end
 end
 end)
