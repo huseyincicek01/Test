@@ -24,6 +24,48 @@ MainSection:NewToggle("Spam Broadcast", "Spam Breadcasts", function(state)
 }
 
 game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+            local args = {
+
+    [1] = "This Game Hacked By Cat2728"
+
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+            local args = {
+
+    [1] = "This Game Hacked By Cat2728"
+
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+            local args = {
+
+    [1] = "This Game Hacked By Cat2728"
+
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+            local args = {
+
+    [1] = "This Game Hacked By Cat2728"
+
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+            local args = {
+
+    [1] = "This Game Hacked By Cat2728"
+
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+            local args = {
+
+    [1] = "This Game Hacked By Cat2728"
+
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
     wait()
     else
         print("End")
