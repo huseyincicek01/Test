@@ -7,14 +7,10 @@ MainSection:NewButton("Get Admin Panel", "Gives Admin Panel", function()
     game:GetService("Workspace").AdminPanel.Parent = game.Players.LocalPlayer.PlayerGui
 end)
 MainSection:NewToggle("Spam Time Stop", "Spams Time Stop", function(state)
-    if state then Sts = state
-        while Sts == do
+    if state then
 wait()
 game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
 end
 else
-Sts = state
-while Sts == true do
-print("ur mom")
 end
 end)
