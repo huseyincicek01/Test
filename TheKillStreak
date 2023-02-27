@@ -12,3 +12,14 @@ MainSection:NewToggle("Spam Time Stop", "Spam Time Stops", function(state)
         print("End")
     end
 end)
+MainSection:NewToggle("Spam Broadcast", "Spam Breadcast", function(state)
+    if state then local args = {
+    [1] = "This Game Hacked By Cat2728"
+}
+
+game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGui"):WaitForChild("AdminPanel"):WaitForChild("AdminPanelGui"):WaitForChild("Events"):WaitForChild("BroadcastEvent"):FireServer(unpack(args))
+    wait()
+    else
+        print("End")
+    end
+end)
