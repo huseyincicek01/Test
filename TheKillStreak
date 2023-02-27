@@ -2,10 +2,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Made By Cat#2728", "DarkTheme")
 
 local Tab = Window:NewTab("Admin")
-Section:NewButton("Get Admin Panel", "Gives Admin Panel", function()
+local MainSection = Main:NewSection("Admin Stuffs")
+MainSection:NewButton("Get Admin Panel", "Gives Admin Panel", function()
     game:GetService("Workspace").AdminPanel.Parent = game.Players.LocalPlayer.PlayerGui
 end)
-Section:NewToggle("Spam Time Stop", "Spams Time Stop", function(state)
+MainSection:NewToggle("Spam Time Stop", "Spams Time Stop", function(state)
     if state then
         while wait() do
 game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
