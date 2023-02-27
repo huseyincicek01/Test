@@ -1,14 +1,14 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Made By Cat#2728", "DarkTheme")
 
-local Tab = Window:NewTab("Admin")
+Main = Window:NewTab("Admin")
 local MainSection = Main:NewSection("Admin Stuffs")
 MainSection:NewButton("Get Admin Panel", "Gives Admin Panel", function()
     game:GetService("Workspace").AdminPanel.Parent = game.Players.LocalPlayer.PlayerGui
 end)
 MainSection:NewToggle("Spam Time Stop", "Spams Time Stop", function(state)
     if state then
-        while wait() do
+        while wait(0.1) do
 game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
     else
     end
