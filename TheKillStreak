@@ -8,9 +8,11 @@ MainSection:NewButton("Get Admin Panel", "Gives Admin Panel", function()
 end)
 MainSection:NewToggle("Spam Time Stop", "Spams Time Stop", function(state)
     if state then
-wait()
+_G.Sts = true
+While _G.Sts do
 game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
 end
 else
+_G.Sts = false
 end
 end)
