@@ -15,4 +15,6 @@ wait()
 SpamTs = state
 while SpamTs == true do
 end
+end
+end
 end)
