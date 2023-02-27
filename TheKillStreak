@@ -8,12 +8,11 @@ end)
 MainSection:NewToggle("Spam Time Stop", "Spam Time Stops", function(state)
     if state then game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
     wait()
-    end
     else
         print("End")
     end
 end)
-MainSection:NewToggle("Spam Broadcast", "Spam Breadcast", function(state)
+MainSection:NewToggle("Spam Broadcast", "Spam Breadcasts", function(state)
     if state then local args = {
     [1] = "This Game Hacked By Cat2728"
 }
