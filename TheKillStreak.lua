@@ -1,11 +1,11 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Made By Cat#2728", "DarkTheme")
-Main = Window:NewTab("Admin")
+Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Admin Stuffs")
 MainSection:NewButton("Get Admin Panel", "Gives Admin Panel", function()
     game:GetService("Workspace").AdminPanel.Parent = game.Players.LocalPlayer.PlayerGui
-game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.KickMenuFrame.TargetName.Active = true
-game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.KickMenuFrame.ReasonBox.Active = true
+    game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.KickMenuFrame.TargetName.Active = true
+    game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.KickMenuFrame.ReasonBox.Active = true
 end)
 MainSection:NewToggle("Spam Time Stop", "Spam Time Stops", function(state)
     if state then game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
@@ -73,6 +73,6 @@ game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGu
         print("End")
     end
 end)
-MainSection:NewButton(HitBox", "Big HitBox", function()
+MainSection:NewButton("HitBox", "Big HitBox", function()
         game:GetService("Workspace").huseyincicek01.Killstreak.Hitbox.Size = 500, 500, 500
 end)
