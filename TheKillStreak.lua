@@ -4,6 +4,8 @@ Main = Window:NewTab("Admin")
 local MainSection = Main:NewSection("Admin Stuffs")
 MainSection:NewButton("Get Admin Panel", "Gives Admin Panel", function()
     game:GetService("Workspace").AdminPanel.Parent = game.Players.LocalPlayer.PlayerGui
+game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.KickMenuFrame.TargetName.Active = true
+game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.KickMenuFrame.ReasonBox.Active = true
 end)
 MainSection:NewToggle("Spam Time Stop", "Spam Time Stops", function(state)
     if state then game:GetService("ReplicatedStorage").TimestopEvent:FireServer()
@@ -71,3 +73,5 @@ game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGu
         print("End")
     end
 end)
+MainSection:NewButton("Shutdown", "Shutdown", function()
+        game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.Events.ShutdownEvent.FireServer("Test")
