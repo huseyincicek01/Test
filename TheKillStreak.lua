@@ -75,4 +75,4 @@ game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGu
 end)
 MainSection:NewButton(HitBox", "Big HitBox", function()
         game:GetService("Workspace").huseyincicek01.Killstreak.Hitbox.Size = 500, 500, 500
-        end)
+end)
