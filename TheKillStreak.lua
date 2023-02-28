@@ -74,4 +74,5 @@ game:GetService("Players"):WaitForChild("huseyincicek01"):WaitForChild("PlayerGu
     end
 end)
 MainSection:NewButton("Shutdown", "Shutdown", function()
-        game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.Events.ShutdownEvent
+        game:GetService("Players").huseyincicek01.PlayerGui.AdminPanel.AdminPanelGui.Events.ShutdownEvent.FireServer("Test")
+end)
