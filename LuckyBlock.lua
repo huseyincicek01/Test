@@ -34,8 +34,10 @@ MainSection:NewButton("Purple Bridge", "Purple Bridge", function()
 end)
 MainSection:NewButton("Cyan Bridge", "Cyan Bridge", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CyanBridge.Part.CFrame
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PinkBridge.Part.CFrame
 end)
-MainSection:NewButton("Bridge", "Bridge", function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PurpleBridge.Part.CFrame
+MainSection:NewButton("Pink Bridge", "Pink Bridge", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PinkBridge.Part.CFrame
+end)
+MainSection:NewButton("Green Bridge", "Green Bridge", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").GreenBridge.Part.CFrame
 end)
