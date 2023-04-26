@@ -24,15 +24,18 @@ MainSection:NewButton("Void Block", "Goto Void Block", function()
 Main = Window:NewTab("Teleport")
 local MainSection = Main:NewSection("Teleport")
 MainSection:NewButton("Yellow Bridge", "Yellow Bridge", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").YellowBridge.Part.CFrame
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").YellowBridge.Part.CFrame
 end)
-MainSection:NewButton("Orange Bridge", "OrangeBridge", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").OrangeBridge.Part.CFrame
+MainSection:NewButton("Orange Bridge", "Orange Bridge", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").OrangeBridge.Part.CFrame
 end)
 MainSection:NewButton("Purple Bridge", "Purple Bridge", function()
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PurpleBridge.Part.CFrame
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PurpleBridge.Part.CFrame
 end)
-MainSection:NewButton("Cyan Bridge", "CyanBridge", function()
-        
+MainSection:NewButton("Cyan Bridge", "Cyan Bridge", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CyanBridge.Part.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PinkBridge.Part.CFrame
+end)
+MainSection:NewButton("Bridge", "Bridge", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").PurpleBridge.Part.CFrame
 end)
