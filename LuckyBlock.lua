@@ -21,3 +21,7 @@ MainSection:NewButton("Galaxy Block", "Free Galaxy Block", function()
 MainSection:NewButton("Void Block", "Free Galaxy Block", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.CenterBlocks.Givers.VoidGiver.GUI.CFrame
     end)
+Main = Window:NewTab("Teleport")
+local MainSection = Main:NewSection("Teleport")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").YellowBridge.Part.CFrame
+end)
