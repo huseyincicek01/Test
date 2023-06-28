@@ -1,0 +1,31 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cat#2728", "BloodTheme", colors)
+
+WeaponSection1:NewSlider("Yoru Speed", "Increase/Decrease", 50, 1, function(s) -- 50 (MaxValue) | 0 (MinValue)
+    Speed = s
+end)
+
+WeaponSection1:NewToggle("Yoru Spam", "Spams Yoru m1", function(state)
+    if state then
+        _G.Yoru = true
+        local Players = game:GetService("Players")
+        local Plr = Players.LocalPlayer
+        local Character = Plr.Character
+        local Yoru = Character:FindFirstChild("Yoru")
+        local Environment
+while _G.Yoru do
+    wait()
+    pcall(function()
+    for i,v in pairs(getconnections(Yoru["RequestAnimation"].OnClientEvent)) do 
+        Environment = getsenv(Yoru["AnimationController"])
+    end
+        wait()
+    for i = 1, Speed do
+    Yoru["RequestAnimation"]:FireServer(Environment.PlaceId)
+    end
+    end)
+    end
+else
+        _G.Yoru = false
+    end
+end)
