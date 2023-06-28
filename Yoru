@@ -3,7 +3,7 @@ local Window = Library.CreateLib("Cat#2728", "BloodTheme")
 
 Main = Window:NewTab("gay")
 local MainSection = Main:NewSection("gay")
-MainSection:NewSlider("Yoru Speed", "Increase/Decrease", 1000, 1, function(s) -- 1000 (MaxValue) | 0 (MinValue)
+MainSection:NewSlider("Yoru Speed", "Increase/Decrease", 100000, 1, function(s) -- 100000 (MaxValue) | 0 (MinValue)
     Speed = s
 end)
 
