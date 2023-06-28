@@ -6,7 +6,7 @@ MainSection:NewSlider("Yoru Speed", "Increase/Decrease", 50, 1, function(s) -- 5
     Speed = s
 end)
 
-WeaponSection1:NewToggle("Yoru Spam", "Spams Yoru m1", function(state)
+WeaponSection:NewToggle("Yoru Spam", "Spams Yoru m1", function(state)
     if state then
         _G.Yoru = true
         local Players = game:GetService("Players")
