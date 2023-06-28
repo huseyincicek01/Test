@@ -1,6 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Cat#2728", "BloodTheme", colors)
 
+Main = Window:NewTab("gay")
 local MainSection = Main:NewSection("gay")
 MainSection:NewSlider("Yoru Speed", "Increase/Decrease", 50, 1, function(s) -- 50 (MaxValue) | 0 (MinValue)
     Speed = s
